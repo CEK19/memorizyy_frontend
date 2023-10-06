@@ -2,6 +2,9 @@ import React, { useEffect, useMemo, useState } from "react";
 import { Resizable } from "re-resizable";
 import Avatar from "./Avatar";
 import IconMinimizeBack from "@/icons/IconMinimizeBack";
+import PanelUserInfo from "./PanelUserInfo";
+import VerticalSpacing from "./VerticalSpacing";
+import DocumentMenu from "./DocumentMenu";
 
 type Props = {
 	children: React.ReactNode;
@@ -21,18 +24,12 @@ const Layout = ({ children }: Props) => {
 
 	return (
 		<React.Fragment>
-			<div className="h-screen w-screen flex flex-row">
-				<Resizable className="h-screen" enable={enableResizeConfig}>
-					<div className="w-36 h-full bg-gray-100">
-						<div className="flex flex-row justify-items-start items-center gap-1 p-2">
-							<Avatar />
-							<div className="text-slate-800 text-xs">
-								Trong Nhan
-							</div>
-							<div className="flex flex-row flex-1 justify-end">
-								<IconMinimizeBack size="xs" />
-							</div>
-						</div>
+			<div className="general-layout h-screen w-screen flex flex-row">
+				<Resizable enable={enableResizeConfig}>
+					<div className="left-bar-all-info w-full h-full min-w-fit bg-gray-100">
+						<PanelUserInfo />
+						<VerticalSpacing />
+						<DocumentMenu />
 					</div>
 				</Resizable>
 				<div className="flex-1">{children}</div>
