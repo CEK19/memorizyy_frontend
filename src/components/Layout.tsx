@@ -1,14 +1,12 @@
-import React, { useEffect, useMemo, useState } from "react";
 import { Resizable } from "re-resizable";
-import Avatar from "./Avatar";
-import IconMinimizeBack from "@/icons/IconMinimizeBack";
-import PanelUserInfo from "./PanelUserInfo";
-import VerticalSpacing from "./VerticalSpacing";
-import DocumentMenu from "./DocumentMenu";
-import MostRecentUsedFolderMenu from "./MostRecentUsedFolderMenu";
-import FlashcardDocumentMenu from "./FlashcardDocumentMenu";
+import React from "react";
 import Divider from "./Divider";
+import DocumentMenu from "./DocumentMenu";
+import FlashcardDocumentMenu from "./FlashcardDocumentMenu";
+import MostRecentUsedFolderMenu from "./MostRecentUsedFolderMenu";
+import PanelUserInfo from "./PanelUserInfo";
 import TopNavBar from "./TopNavBar";
+import VerticalSpacing from "./VerticalSpacing";
 
 type Props = {
 	children: React.ReactNode;
