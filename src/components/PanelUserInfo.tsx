@@ -8,15 +8,19 @@ type Props = {};
 const PanelUserInfo = (props: Props) => {
 	return (
 		<React.Fragment>
-			<SelectedLineOnMenu>
-				<div className="w-full h-full flex flex-row">
-					<Avatar />
-					<div className="text-slate-800 text-xs">Trong Nhan</div>
-					<div className="pl-3 flex flex-row flex-1 justify-end">
-						<IconMinimizeBack size="xs" />
+			<div className="panel-user-info w-h">
+				<SelectedLineOnMenu>
+					<div className="panel-user-info w-full h-full flex flex-row">
+						<Avatar />
+						<div className="pl-2 text-slate-800 text-xs">
+							Trong Nhan
+						</div>
+						<div className="pl-3 flex flex-row flex-1 justify-end">
+							<IconMinimizeBack size="xs" />
+						</div>
 					</div>
-				</div>
-			</SelectedLineOnMenu>
+				</SelectedLineOnMenu>
+			</div>
 		</React.Fragment>
 	);
 };

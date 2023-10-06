@@ -5,7 +5,7 @@ type Props = {};
 const VerticalSpacing = (props: Props) => {
 	return (
 		<React.Fragment>
-			<div className="py-1"></div>
+			<div className="vertical-space py-1"></div>
 		</React.Fragment>
 	);
 };

@@ -22,17 +22,19 @@ const DocumentFeaturesText: { [key: string]: string } = {
 const DocumentMenu = (props: Props) => {
 	return (
 		<React.Fragment>
-			{Object.keys(DocumentFeatures).map((docFtrKey) => {
-				return (
-					<SelectedLineOnMenu key={docFtrKey} className="py-1">
-						<div className="w-full h-full flex flex-row">
-							<div className="text-slate-800 text-xs">
-								{DocumentFeaturesText[docFtrKey]}
+			<div className="document-menu w-full">
+				{Object.keys(DocumentFeaturesText).map((docFtrKey) => {
+					return (
+						<SelectedLineOnMenu key={docFtrKey} className="py-1">
+							<div className="w-full h-full flex flex-row">
+								<div className="text-slate-800 text-xs">
+									{DocumentFeaturesText[docFtrKey]}
+								</div>
 							</div>
-						</div>
-					</SelectedLineOnMenu>
-				);
-			})}
+						</SelectedLineOnMenu>
+					);
+				})}
+			</div>
 		</React.Fragment>
 	);
 };

@@ -5,6 +5,10 @@ import IconMinimizeBack from "@/icons/IconMinimizeBack";
 import PanelUserInfo from "./PanelUserInfo";
 import VerticalSpacing from "./VerticalSpacing";
 import DocumentMenu from "./DocumentMenu";
+import MostRecentUsedFolderMenu from "./MostRecentUsedFolderMenu";
+import FlashcardDocumentMenu from "./FlashcardDocumentMenu";
+import Divider from "./Divider";
+import TopNavBar from "./TopNavBar";
 
 type Props = {
 	children: React.ReactNode;
@@ -24,15 +28,28 @@ const Layout = ({ children }: Props) => {
 
 	return (
 		<React.Fragment>
-			<div className="general-layout h-screen w-screen flex flex-row">
+			<div className="layout h-screen w-screen flex flex-row">
 				<Resizable enable={enableResizeConfig}>
 					<div className="left-bar-all-info w-full h-full min-w-fit bg-gray-100">
 						<PanelUserInfo />
+						<Divider />
 						<VerticalSpacing />
+
 						<DocumentMenu />
+						<Divider />
+						<VerticalSpacing />
+
+						<MostRecentUsedFolderMenu />
+						<Divider />
+						<VerticalSpacing />
+
+						<FlashcardDocumentMenu />
 					</div>
 				</Resizable>
-				<div className="flex-1">{children}</div>
+				<div className="flex-1">
+					<TopNavBar />
+					{children}
+				</div>
 			</div>
 		</React.Fragment>
 	);
