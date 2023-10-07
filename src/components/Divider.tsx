@@ -12,7 +12,9 @@ function Divider({ className = "", type = "horizontal" }: Props) {
 				return (
 					<div
 						className={
-							"divider w-[1px] bg-slate-300" + " " + className
+							"divider w-full border-y-[1px] border-gray-200" +
+							className +
+							" "
 						}
 					></div>
 				);
@@ -21,7 +23,7 @@ function Divider({ className = "", type = "horizontal" }: Props) {
 				return (
 					<div
 						className={
-							"divider w-[1px] h-full bg-slate-300" +
+							"divider h-full border-x-[1px] border-gray-200" +
 							" " +
 							className
 						}
