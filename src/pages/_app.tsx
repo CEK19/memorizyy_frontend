@@ -5,14 +5,19 @@ import { Roboto_Mono } from "next/font/google";
 import React from "react";
 
 export const roboto_mono = Roboto_Mono({
-	subsets: ["latin"],
+	subsets: ["vietnamese", "latin"],
 	display: "swap",
 });
 
 export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<React.Fragment>
-			<main className={roboto_mono.className}>
+			<main
+				className={roboto_mono.className}
+				style={{
+					letterSpacing: "0.0625 rem",
+				}}
+			>
 				<Layout>
 					<Component {...pageProps} />
 				</Layout>
