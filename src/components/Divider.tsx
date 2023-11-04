@@ -1,3 +1,5 @@
+
+import classNames from "classnames";
 import React, { useMemo } from "react";
 
 type Props = {
@@ -10,27 +12,15 @@ function Divider({ className = "", type = "horizontal" }: Props) {
 		switch (type) {
 			case "horizontal":
 				return (
-					<div
-						className={
-							"divider w-full border-y-[1px] border-gray-200" +
-							className +
-							" "
-						}
-					></div>
+					<div className={classNames("divider w-full border-y-[1px] border-gray-200", className)} />
 				);
 
 			case "vertical":
 				return (
-					<div
-						className={
-							"divider h-full border-x-[1px] border-gray-200" +
-							" " +
-							className
-						}
-					></div>
+					<div className={classNames("divider h-full border-x-[1px] border-gray-200", className)} />
 				);
 		}
-	}, [type]);
+	}, [type, className]);
 
 	return <React.Fragment>{dividerComponent}</React.Fragment>;
 }

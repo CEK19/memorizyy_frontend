@@ -2,14 +2,30 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## Getting Started
 
+- install pnpm: `npm install -g pnpm`
+- just use pnpm
+
 First, run the development server:
 
 ```bash
-npm run dev
+
+# dev mode
+pnpm start
 # or
-yarn dev
-# or
-pnpm dev
+pnpm run dev
+
+# build
+pnpm run build
+
+# start optimized build, you can run this command after success build
+pnpm run start-optimize
+
+# test
+pnpm run test
+
+# lint code
+pnpm run lint
+
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
