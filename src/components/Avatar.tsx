@@ -1,17 +1,16 @@
-import Image from "next/image";
 import React from "react";
+import { Avatar as AvatarNext } from "@nextui-org/avatar";
 
-type Props = {};
+interface AvatarProps {
+	src: string;
+	size?: "sm" | "md" | "lg";
+	className?: string;
+	name?: string;
+}
 
-const Avatar = (props: Props) => {
+const Avatar = (props: AvatarProps) => {
 	return (
-		<React.Fragment>
-			<Image
-				src={""}
-				alt="user-avatar"
-				className="rounded-full w-4 h-4 bg-slate-200"
-			/>
-		</React.Fragment>
+		<AvatarNext showFallback src={props.src} alt="user-avatar" size={props?.size || "md"} className={props.className} name={props.name} />
 	);
 };
 

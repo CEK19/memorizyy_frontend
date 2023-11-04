@@ -1,13 +1,6 @@
-import { Resizable } from "re-resizable";
-import React, { useEffect, useRef } from "react";
-import Divider from "./Divider";
-import DocumentMenu from "./DocumentMenu";
-import FlashcardDocumentMenu from "./FlashcardDocumentMenu";
-import MostRecentUsedFolderMenu from "./MostRecentUsedFolderMenu";
-import PanelUserInfo from "./PanelUserInfo";
-import TopNavBar from "./TopNavBar";
-import VerticalSpacing from "./VerticalSpacing";
-import LeftNavBar from "./LeftNavBar";
+import React from "react";
+import TopNavBar from "./NavigationPanel/TopNavBar";
+import LeftNavBar from "./NavigationPanel/LeftNavBar";
 
 type Props = {
 	children: React.ReactNode;
